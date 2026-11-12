@@ -16,6 +16,18 @@ const qorechainTestnet = defineChain({
   blockExplorers: { default: { name: "QoreChain Explorer", url: "https://explore.qore.network" } },
 });
 
+// Short, actionable errors instead of a stack trace.
+function explain(err: unknown): never {
+  const m = err instanceof Error ? (err as Error & { shortMessage?: string }).shortMessage ?? err.message : String(err);
+  const full = err instanceof Error ? err.message : String(err);
+  const named = /Error: (\w+)\(/.exec(full)?.[1];
+  console.error(`refused: ${m.split("\n")[0]}${named ? ` (${named})` : ""}`);
+  if (/window|pqc|authori[sz]ation/i.test(m)) console.error("hint: open an EVM window first: pnpm window open (then wait ~10 s)");
+  process.exit(1);
+}
+process.on("unhandledRejection", explain);
+process.on("uncaughtException", explain);
+
 const abi = parseAbi(["function count() view returns (uint256)", "function increment()"]);
 
 function counterAddress(): Address {
