@@ -1,0 +1,10 @@
+#!/bin/sh
+# Q-Day Tip Jar launcher: runs the prebuilt fat jar (build it once with `mvn -q package`).
+DIR="$(cd "$(dirname "$0")" && pwd)"
+JAR="$DIR/target/tipjar.jar"
+[ -f "$JAR" ] || { echo "build first: (cd $DIR && mvn -q package)" >&2; exit 1; }
+FLAGS="-XX:TieredStopAtLevel=1 -Xshare:auto"
+# JDK 24+ warns when protobuf uses sun.misc.Unsafe; keep the output clean.
+MAJOR=$(java -version 2>&1 | sed -n 's/.*version "\([0-9]*\).*/\1/p' | head -1)
+[ "${MAJOR:-0}" -ge 24 ] && FLAGS="$FLAGS --sun-misc-unsafe-memory-access=allow"
+cd "$DIR" && exec java $FLAGS -jar target/tipjar.jar "$@"

@@ -1,0 +1,57 @@
+:root {
+  --bg: #0B0B1F; --card: #14142e; --line: #2a2a52; --text: #e8edf9; --muted: #9aa8c7;
+  --accent: #3BFFD8; --accent2: #9939FF; --ok: #2fd08a; --bad: #ff6b6b;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(1200px 600px at 20% -10%, #24205a 0%, var(--bg) 60%); color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, sans-serif; min-height: 100vh; }
+.page { max-width: 980px; margin: 0 auto; padding: 24px 16px 48px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.wordmark { font-size: 22px; letter-spacing: .04em; font-weight: 400; }
+.wordmark b { font-weight: 800; }
+.tag { border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; color: var(--muted); font-size: 13px; }
+.net { color: var(--muted); font-size: 14px; display: flex; align-items: center; gap: 8px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 8px var(--ok); }
+.lead { font-size: 18px; line-height: 1.55; color: #cdd6ee; margin: 24px 0; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; margin: 16px 0; }
+.card.dim { opacity: .55; }
+h2 { margin: 0 0 14px; font-size: 18px; display: flex; align-items: center; gap: 10px; }
+.n { width: 26px; height: 26px; border-radius: 50%; color: #0B0B1F; font-weight: 800; background: linear-gradient(94.83deg, #3BFFD8 -18.69%, #9939FF 123.29%);
+  display: inline-grid; place-items: center; font-size: 14px; }
+button { background: linear-gradient(94.83deg, #3BFFD8 -18.69%, #9939FF 123.29%); color: #0B0B1F; border: 0; border-radius: 999px;
+  padding: 11px 22px; font-size: 15px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+button:disabled { opacity: .5; cursor: default; }
+input { width: 100%; background: #101028; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+  font-size: 14px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.form { display: grid; grid-template-columns: 1fr 160px; gap: 12px; margin-bottom: 14px; }
+.form label { display: grid; gap: 6px; color: var(--muted); font-size: 13px; }
+.form label:last-child { grid-column: 1 / -1; }
+.row { display: flex; gap: 10px; }
+.kv { display: grid; grid-template-columns: 170px 1fr; gap: 8px 14px; font-size: 14px; margin-top: 14px; }
+.kv > div { color: var(--muted); }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; word-break: break-all; }
+.small { color: var(--muted); font-size: 13px; }
+.verdict { border-radius: 14px; padding: 16px 18px; display: grid; gap: 4px; margin-top: 16px; }
+.verdict.ok { background: rgba(47, 208, 138, .12); border: 1px solid var(--ok); }
+.verdict.bad { background: rgba(255, 107, 107, .12); border: 1px solid var(--bad); }
+.verdict .big { font-size: 20px; font-weight: 700; }
+.verdict.ok .big { color: var(--ok); }
+.verdict.bad .big { color: var(--bad); }
+.sigs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.sig { border: 1px solid var(--line); border-radius: 14px; padding: 14px; background: #111130; }
+.sig.pq { border-color: var(--accent2); }
+.sig h3 { margin: 0; font-size: 15px; }
+.algo { margin: 2px 0 10px; color: var(--muted); font-size: 13px; }
+.bar { height: 10px; background: #0B0B1F; border-radius: 6px; overflow: hidden; margin-bottom: 8px; }
+.bar > div { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+.hex { display: block; color: #8fb0ff; margin: 6px 0; }
+.hint { color: var(--muted); font-size: 12px; margin: 6px 0 0; }
+.pill { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 13px; margin: 0 6px 6px 0; }
+.pill.ok { background: rgba(47, 208, 138, .15); color: var(--ok); }
+.pill.bad { background: rgba(255, 107, 107, .15); color: var(--bad); }
+.error { background: rgba(255, 107, 107, .12); border: 1px solid var(--bad); border-radius: 12px; padding: 12px 14px; }
+a { color: #8fb0ff; }
+footer { color: var(--muted); font-size: 12px; text-align: center; margin-top: 28px; }
+@media (max-width: 720px) { .sigs, .form { grid-template-columns: 1fr; } .kv { grid-template-columns: 1fr; } .row { flex-direction: column; } }

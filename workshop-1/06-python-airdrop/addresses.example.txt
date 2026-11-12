@@ -1,0 +1,6 @@
+# One qor1 address per line. Blank lines and lines starting with # are ignored.
+# Replace these placeholders with real testnet addresses (for example the ones
+# workshop attendees paste in the chat). Invalid and duplicate lines are skipped
+# with a warning.
+qor1...replace-with-a-testnet-address
+qor1...replace-with-another-testnet-address
