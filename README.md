@@ -22,6 +22,17 @@ from each language's registry. Testnet QOR has no value.
 | [05-java-tipjar](workshop-1/05-java-tipjar) | Java 21, Maven Central `io.github.qorechain:qorechain-sdk` | A backend that only accepts payments signed post-quantum |
 | [06-python-airdrop](workshop-1/06-python-airdrop) | Python, PyPI `qorechain-sdk` | Pay many addresses in one hybrid-signed transaction |
 
+## Workshop 2: post-quantum dApps and AI agents (17 November 2026)
+
+New to this? Start with the README of each app: every command is explained, with why it is done
+that way.
+
+| App | Language, package | What it shows |
+|---|---|---|
+| [01-qday-vault](workshop-2/01-qday-vault) | Solidity + TypeScript, Foundry, `@qorechain/sdk` | A vault that pays out only with an ML-DSA-87 signature checked on chain by `pqcVerify`; a scoped EVM window; Foundry tests; a two-stage QCAI audit |
+| [02-pq-agent](workshop-2/02-pq-agent) | JavaScript, `@qorechain/sdk` | A bill-paying agent whose spending limits the chain enforces: paid, refused, revoked |
+| [03-mcp](workshop-2/03-mcp) | `@qorechain/mcp`, `@qorechain/qore-cli` | Let your AI tools read the chain, with no keys and no signing |
+
 ## Testnet
 
 | | |

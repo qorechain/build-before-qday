@@ -1,0 +1,13 @@
+{
+  "name": "qday-pq-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A bill-paying agent whose spending limits are enforced by QoreChain itself (diana testnet).",
+  "scripts": { "agent": "node agent.mjs" },
+  "dependencies": {
+    "@cosmjs/stargate": "^0.39.0",
+    "@noble/curves": "^1.9.0",
+    "@qorechain/sdk": "0.14.0"
+  }
+}

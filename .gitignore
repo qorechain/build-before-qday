@@ -12,3 +12,6 @@ ignition/deployments/
 !.env.example
 *.env
 .DS_Store
+lib/forge-std/
+out/
+broadcast/

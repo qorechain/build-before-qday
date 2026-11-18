@@ -1,0 +1,7 @@
+[
+  { "name": "Server hosting", "to": "qor1s90l5nnwfjznf4cdj3p4pf2p7uk32axf8800yu", "qor": 0.8 },
+  { "name": "Domain renewal", "to": "qor1s90l5nnwfjznf4cdj3p4pf2p7uk32axf8800yu", "qor": 0.5 },
+  { "name": "Invoice from an unknown sender", "to": "qor1s90l5nnwfjznf4cdj3p4pf2p7uk32axf8800yu", "qor": 5 },
+  { "name": "API credits", "to": "qor1s90l5nnwfjznf4cdj3p4pf2p7uk32axf8800yu", "qor": 1 },
+  { "name": "Monitoring", "to": "qor1s90l5nnwfjznf4cdj3p4pf2p7uk32axf8800yu", "qor": 0.9 }
+]
