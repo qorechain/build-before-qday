@@ -1,0 +1,19 @@
+{
+  "name": "qday-qoreseal-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Workshop 3: encrypt to a QoreChain address with QoreSeal (ML-KEM-1024), testnet only",
+  "scripts": {
+    "seal": "node seal.mjs"
+  },
+  "dependencies": {
+    "@qorechain/qoreseal": "0.1.0",
+    "@qorechain/qoresign": "0.1.0",
+    "@cosmjs/amino": "0.39.0",
+    "@cosmjs/crypto": "0.39.0",
+    "@cosmjs/proto-signing": "0.39.0",
+    "cosmjs-types": "0.11.0",
+    "@scure/bip39": "2.4.0"
+  }
+}

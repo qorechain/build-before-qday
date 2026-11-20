@@ -15,3 +15,7 @@ ignition/deployments/
 lib/forge-std/
 out/
 broadcast/
+
+# QoreSeal demo: local cards and envelopes
+workshop-3/01-qoreseal/cards/
+workshop-3/01-qoreseal/inbox/

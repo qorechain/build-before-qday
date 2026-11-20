@@ -33,6 +33,13 @@ that way.
 | [02-pq-agent](workshop-2/02-pq-agent) | JavaScript, `@qorechain/sdk` | A bill-paying agent whose spending limits the chain enforces: paid, refused, revoked |
 | [03-mcp](workshop-2/03-mcp) | `@qorechain/mcp`, `@qorechain/qore-cli` | Let your AI tools read the chain, with no keys and no signing |
 
+## Workshop 3: encrypted apps and cross-VM calls (20 November 2026)
+
+| App | Language, package | What it shows |
+|---|---|---|
+| [01-qoreseal](workshop-3/01-qoreseal) | JavaScript, `@qorechain/qoreseal`, `@qorechain/qoresign` | Encrypt a message to a `qor1...` address with ML-KEM-1024: keys registered on chain, a signed recipient card, tamper refusal, several recipients, key rotation |
+| [02-cross-vm](workshop-3/02-cross-vm) | Solidity + TypeScript (Foundry), Rust (CosmWasm) | An EVM contract that writes into a governance-approved Native contract in the same transaction, through the bridge at `0x...0901`; both sides change or neither does |
+
 ## Testnet
 
 | | |
